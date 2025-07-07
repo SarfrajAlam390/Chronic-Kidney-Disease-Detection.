@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="ISO-8859-1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Login</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #1abc9c, #2ecc71);
+      min-height: 100vh;
+      color: white;
+    }
+
+    nav {
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .logo {
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: white;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #f1c40f;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px;
+      border-radius: 15px;
+      max-width: 400px;
+      margin: 80px auto;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 25px;
+      font-size: 2rem;
+    }
+
+    .login-form label {
+      display: block;
+      text-align: left;
+      margin: 15px 0 5px;
+      font-weight: 500;
+    }
+
+    .login-form input {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .login-form button {
+      background-color: #f39c12;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 20px;
+      transition: background 0.3s ease;
+    }
+
+    .login-form button:hover {
+      background-color: #e67e22;
+    }
+
+    .register-link {
+      margin-top: 20px;
+      display: block;
+      font-size: 0.95rem;
+    }
+
+    .register-link a {
+      color: #ffeaa7;
+      text-decoration: underline;
+      transition: color 0.3s ease;
+    }
+
+    .register-link a:hover {
+      color: #fff;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.6);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="logo">ProjectPredict</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <!-- <li><a href="Admin.jsp">Admin</a></li> -->
+      <li><a href="Employee.jsp">Register</a></li>
+    </ul>
+  </nav>
+
+  <!-- Login Form -->
+  <div class="container">
+    <h2>Patient Login</h2>
+    <form action="login" method="POST" class="login-form">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+      <button type="submit">Login</button>
+      <p class="register-link">New user? <a href="Employee.jsp">Click here to register</a></p>
+    </form>
+  </div>
+
+  <footer>
+    &copy; 2025 ProjectPredict Inc. All rights reserved.
+  </footer>
+
+</body>
+</html>
